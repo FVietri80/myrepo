@@ -8,19 +8,12 @@ import matplotlib.pyplot  as plt
 import numpy as np
 
 
-xpoints = []
-ypoints = []
-for i in range(10) :
-    xpoints.append(round(random.random(),1))
+x = np.linspace(-2*np.pi,2*np.pi,100)
 
-#print(xpoints)
-for i in range(len(xpoints)):
-    ypoints.append(round(mt.sin((2*mt.pi*xpoints[i])+random.uniform(0,1)),1))
+y =np.sin(x)
 
-print(ypoints)
+z = y =np.sin(x+np.random.uniform(-2*np.pi,2*np.pi))
 
-plt.plot(xpoints,ypoints,'o',color = 'black')
+plt.plot(x,y)
+plt.plot(z,marker = 'o',color = 'red')
 plt.show()
-
-
-
